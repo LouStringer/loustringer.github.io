@@ -80,7 +80,7 @@ nav h3 {
 
 nav button {
   width: 70px;
-  height: 50px;
+  height: 35px;
   font-size: 1em;
   background: #e7e7e7;
   border: 0px;
@@ -88,14 +88,10 @@ nav button {
   transition: 0.1s;
 }
 
-nav button:focus {
-  border: 1.5px solid #404040;
+nav button:hover, nav button:focus {
+  border: 1px solid rgba(46, 189, 206, 0.4);
   border-radius: 0.5em;
-}
-
-nav button:hover {
-  border: 1.5px solid #404040;
-  border-radius: 0.5em;
+  background-color: #ffffff;
 }
 /*
 .hide {
@@ -155,12 +151,18 @@ nav button:hover {
 
 .work .featured-work-wrapper .featured-work-example {
   margin: 10px;
-  background: #FFFFFF;
+  border: 5px solid rgba(46, 189, 206, 0.3);
+  background: rgba(224, 162, 173, 0.2);
+  transition: 0.2s;
+}
+
+.featured-work-example:hover, .featured-work-example:focus {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
 .work .featured-work-wrapper .featured-work-image {
   margin: 0;
-  border: 5px solid rgba(46, 189, 206, 0.4);
 }
 
 .work .featured-work-wrapper .featured-work-content {
@@ -168,8 +170,6 @@ nav button:hover {
   padding: 10px;
   text-align: center;
 }
-
-
 
 /* writing section */
 .writing {
@@ -189,9 +189,15 @@ nav button:hover {
 .writing .writing-wrapper .writing-example {
   width: 450px;
   margin: 10px;
-  border: 5px solid rgba(46, 189, 206, 0.4);
+  border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 10px;
   background: #FFFFFF;
+  transition: 0.2s;
+}
+
+.writing-example:hover, .writing-example:focus {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
 /* about section */
@@ -202,7 +208,7 @@ nav button:hover {
   justify-content: center;
   align-items: flex-start;
   padding: 0 50px;
-  background: #e7e7e7;
+  background-color: #e7e7e7;
 }
 
 /* contact section */
@@ -216,7 +222,25 @@ nav button:hover {
   /* background: #e7e7e7; */
 }
 
+.contact .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+  max-height: 80px;
+  margin: 10px;
+}
+
 .contact .links a {
-  /* display: inline-block; */
+  display: inline-block;
   margin: 0 10px;
+  padding: 0 5px;
+  line-height: 35px;
+}
+
+.contact .links a:hover, .contact .links a:focus {
+  border: 1px solid rgba(46, 189, 206, 0.4);
+  border-radius: 0.5em;
+  background-color: #e7e7e7;
 }
