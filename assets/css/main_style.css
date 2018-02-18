@@ -1,0 +1,161 @@
+/* Lou Stringer portfolio: main style sheet */
+
+/* fonts */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* reset global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+  /* font-family: "Open Sans"; */
+  color: #3E3E3E;
+}
+
+*:focus {
+  outline: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat";
+  letter-spacing: 0.1em;
+}
+
+p {
+  margin-top: 10px;
+}
+
+/* Nav bar */
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #e7e7e7;
+  padding: 0 10px;
+}
+
+nav h3 {
+  margin: 0 auto 0 0;
+}
+
+nav button {
+  width: 70px;
+  height: 50px;
+  font-size: 1em;
+  background: #e7e7e7;
+  border: 0px;
+  margin: 0 5px 0 0;
+  transition: 0.1s;
+}
+
+nav button:focus {
+  border: 1.5px solid #404040;
+  border-radius: 0.5em;
+}
+
+nav button:hover {
+  border: 1.5px solid #404040;
+  border-radius: 0.5em;
+}
+/*
+.hide {
+  visibility: hidden;
+} */
+
+/* main landing section */
+.landing {
+  display: flex;
+  justify-content: flex-end;
+  /* background: #34c7d9; */
+  background: rgba(46, 189, 206, 0.4);
+  /* opacity: 0.5; */
+}
+
+.landing .image {
+  height: 100vh;
+  margin-right: auto;
+}
+
+.landing .content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 50px;
+}
+
+.landing h1 {
+  text-align: right;
+  font-size: 3.25em;
+}
+
+/* portfolio section */
+.portfolio {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
+  background: #e7e7e7;
+}
+
+/* writing section */
+.writing {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 50px;
+  /* background: #e7e7e7; */
+}
+
+/* about section */
+.about {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
+  background: #e7e7e7;
+}
+
+/* contact section */
+.contact {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 50px;
+  /* background: #e7e7e7; */
+}

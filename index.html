@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/assets/css/main_style.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/main_style.css" type="text/css">
   <title>Lou Stringer | Web Developer</title>
 </head>
 <body>
@@ -12,33 +12,55 @@
 Make sure accessible: contrast, tab through -->
 
   <nav>
-    <button>about</button>
+    <h3 class="hide">Lou Stringer</h3>
     <button>portfolio</button>
     <button>writing</button>
+    <button>about</button>
     <button>contact</button>
   </nav>
 
+  <main>
 <!-- main landing section -->
-  <h1>Lou Stringer</h1>
-  <p>stuff</p>
-
-<!-- about -->
-<!-- lighthearted, but some substance -> mention living abroad -->
-  <p>bikes, beer, Asia, running, quoting films no-one else remembers</p>
+    <div class="landing">
+      <img src="assets/images/main.jpg" alt="" class="image"/>
+      <div class="content">
+        <h1>Lou Stringer</h1>
+        <p>web developer | educator </p>
+      </div>
+    </div>
 
 <!-- portfolio -->
-cards with details of projects.
+    <div class="portfolio">
+      <h2>portfolio</h2>
+    </div>
+
+<!-- cards with details of projects.
 - placeholders for York Craft Beer and CodeMates,
 - make nice page for what the hex is that?
-link to diff page for more info, or pop out section?
+link to diff page for more info, or pop out section? -->
 
 <!-- writing -->
-for each post: title, overview -> each links to Jeykll page?
-NEED TO WRITE SOMETHING!!
+    <div class="writing">
+      <h2>writing</h2>
+    </div>
+<!-- for each post: title, overview -> each links to Jeykll page?
+NEED TO WRITE SOMETHING!! -->
 
+<!-- about -->
+<!-- lighthearted, but some substance -> mention living abroad - photos? -->
+    <div class="about">
+      <h2>hiya, nice to meet you</h2>
+      <p>bikes, beer, Asia, running, quoting films no-one else remembers</p>
+    </div>
 <!-- contact -->
-links (with icons) to github, codepen(?), linkedIn, twitter, email adress
+    <div class="contact">
+      <h2>other places you can find me</h2>
+      <!-- links (with icons) to github, codepen(?), linkedIn, twitter, email adress -->
+    </div>
+  </main>
+  <footer>
 
-  <script src="/assets/js/main_script.js" charset="utf-8"></script>
+  </footer>
+  <script src="assets/js/main_script.js" charset="utf-8"></script>
 </body>
 </html>
