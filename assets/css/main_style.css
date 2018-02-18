@@ -44,8 +44,12 @@ h1, h2, h3 {
   letter-spacing: 0.1em;
 }
 
-p {
-  margin-top: 10px;
+h2 {
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Nav bar */
@@ -102,7 +106,7 @@ nav button:hover {
   margin-right: auto;
 }
 
-.landing .content {
+.landing .landing-wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -111,21 +115,55 @@ nav button:hover {
   padding: 0 50px;
 }
 
-.landing h1 {
+.landing .landing-wrapper h1 {
   text-align: right;
   font-size: 3.25em;
 }
 
-/* portfolio section */
-.portfolio {
+.landing .landing-wrapper p {
+  margin-top: 10px;
+}
+
+
+/* featured work section */
+.work {
   min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 50px;
+  padding: 20px 50px;
   background: #e7e7e7;
 }
+
+h2 {
+  margin: 20px 0;
+}
+
+.work .featured-work-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.work .featured-work-wrapper .featured-work-example {
+  margin: 10px;
+  background: #FFFFFF;
+  /* width: 300px; */
+  /* width: 450px; */
+  /* border: 1px solid #404040;
+  padding: 10px; */
+}
+
+.work .featured-work-wrapper .featured-work-image {
+  margin: 0;
+  border: 5px solid rgba(46, 189, 206, 0.4);
+}
+
+.work .featured-work-wrapper .featured-work-content {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+
 
 /* writing section */
 .writing {
@@ -158,4 +196,9 @@ nav button:hover {
   align-items: flex-end;
   padding: 0 50px;
   /* background: #e7e7e7; */
+}
+
+.contact .links a {
+  /* display: inline-block; */
+  margin: 0 10px;
 }
