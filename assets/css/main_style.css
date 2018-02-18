@@ -46,6 +46,16 @@ h1, h2, h3 {
 
 h2 {
   margin: 20px 0;
+  padding: 10px;
+}
+
+.work h2, .about h2 {
+  background: #ffffff;
+}
+
+.writing h2, .contact h2 {
+  background: #e7e7e7;
+  text-align: right;
 }
 
 a {
@@ -124,32 +134,28 @@ nav button:hover {
   margin-top: 10px;
 }
 
+.work, .writing, .about, .contact {
+  background-image: url("gplay.png");
+  background-repeat: repeat;
+}
+
 
 /* featured work section */
 .work {
   min-height: 50vh;
   padding: 20px 50px;
-  background: #e7e7e7;
-}
-
-h2 {
-  margin: 20px 0;
+  background-color: #e7e7e7;
 }
 
 .work .featured-work-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
 }
 
 .work .featured-work-wrapper .featured-work-example {
   margin: 10px;
   background: #FFFFFF;
-  /* width: 300px; */
-  /* width: 450px; */
-  /* border: 1px solid #404040;
-  padding: 10px; */
 }
 
 .work .featured-work-wrapper .featured-work-image {
@@ -168,12 +174,24 @@ h2 {
 /* writing section */
 .writing {
   min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 50px;
+  padding: 20px 50px;
   /* background: #e7e7e7; */
+}
+
+.writing .writing-wrapper {
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.writing .writing-wrapper .writing-example {
+  width: 450px;
+  margin: 10px;
+  border: 5px solid rgba(46, 189, 206, 0.4);
+  padding: 10px;
+  background: #FFFFFF;
 }
 
 /* about section */
