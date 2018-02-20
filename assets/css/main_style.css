@@ -60,10 +60,12 @@ h2 {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 /* Nav bar */
 nav {
+  z-index: 10;
   position: fixed;
   display: flex;
   justify-content: flex-end;
@@ -74,24 +76,38 @@ nav {
   padding: 0 10px;
 }
 
-nav h3 {
-  margin: 0 auto 0 0;
-}
-
-nav button {
-  width: 70px;
+nav a {
+  width: 80px;
   height: 35px;
   font-size: 1em;
-  background: #e7e7e7;
-  border: 0px;
+  border: 1px solid #e7e7e7;
   margin: 0 5px 0 0;
+  text-align: center;
+  line-height: 35px;
   transition: 0.1s;
 }
 
-nav button:hover, nav button:focus {
+nav a.home {
+  width: 150px;
+  height: 35px;
+  margin: 0 auto 0 0;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  line-height: 35px;
+  transition: 0.1s;
+}
+
+nav a:hover, nav a:focus {
   border: 1px solid rgba(46, 189, 206, 0.4);
   border-radius: 0.5em;
   background-color: #ffffff;
+}
+
+nav a.home:hover, nav a.home:focus {
+  border: 1px solid #3E3E3E;
+  border-radius: 0.5em;
+  background-color: #e7e7e7;
+  /* box-shadow: inset 0px 0px 3px rgba(62, 62, 62, 0.3); */
 }
 /*
 .hide {
@@ -99,7 +115,7 @@ nav button:hover, nav button:focus {
 } */
 
 /* main landing section */
-.landing {
+#landing {
   display: flex;
   justify-content: flex-end;
   /* background: #34c7d9; */
@@ -107,12 +123,12 @@ nav button:hover, nav button:focus {
   /* opacity: 0.5; */
 }
 
-.landing .image {
+#landing .image {
   height: 100vh;
   margin-right: auto;
 }
 
-.landing .landing-wrapper {
+#landing .landing-wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -121,35 +137,35 @@ nav button:hover, nav button:focus {
   padding: 0 50px;
 }
 
-.landing .landing-wrapper h1 {
+#landing .landing-wrapper h1 {
   text-align: right;
   font-size: 3.25em;
 }
 
-.landing .landing-wrapper p {
+#landing .landing-wrapper p {
   margin-top: 10px;
 }
 
-.work, .writing, .about, .contact {
+#work, #thoughts, #about, #contact {
   background-image: url("gplay.png");
   background-repeat: repeat;
 }
 
 
 /* featured work section */
-.work {
+#work {
   min-height: 50vh;
   padding: 20px 50px;
   background-color: #e7e7e7;
 }
 
-.work .featured-work-wrapper {
+#work .featured-work-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.work .featured-work-wrapper .featured-work-example {
+#work .featured-work-wrapper .featured-work-example {
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   background: rgba(224, 162, 173, 0.2);
@@ -161,24 +177,24 @@ nav button:hover, nav button:focus {
   box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
-.work .featured-work-wrapper .featured-work-image {
+#work .featured-work-wrapper .featured-work-image {
   margin: 0;
 }
 
-.work .featured-work-wrapper .featured-work-content {
+#work .featured-work-wrapper .featured-work-content {
   margin: 0;
   padding: 10px;
   text-align: center;
 }
 
 /* writing section */
-.writing {
+#thoughts {
   min-height: 50vh;
   padding: 20px 50px;
   /* background: #e7e7e7; */
 }
 
-.writing .writing-wrapper {
+#thoughts .thoughts-wrapper {
   min-height: 40vh;
   display: flex;
   justify-content: space-around;
@@ -186,7 +202,7 @@ nav button:hover, nav button:focus {
   flex-wrap: wrap;
 }
 
-.writing .writing-wrapper .writing-example {
+#thoughts .thoughts-wrapper .thoughts-example {
   width: 450px;
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
@@ -195,13 +211,13 @@ nav button:hover, nav button:focus {
   transition: 0.2s;
 }
 
-.writing-example:hover, .writing-example:focus {
+.thoughts-example:hover, .thoughts-example:focus {
   transform: scale(1.05, 1.05);
   box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
 /* about section */
-.about {
+#about {
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -212,7 +228,7 @@ nav button:hover, nav button:focus {
 }
 
 /* contact section */
-.contact {
+#contact {
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -222,7 +238,7 @@ nav button:hover, nav button:focus {
   /* background: #e7e7e7; */
 }
 
-.contact .links {
+#contact .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -232,14 +248,16 @@ nav button:hover, nav button:focus {
   margin: 10px;
 }
 
-.contact .links a {
+#contact .links a {
   display: inline-block;
   margin: 0 10px;
+  border: 1px solid #ffffff;
+  border-radius: 0.5em;
   padding: 0 5px;
   line-height: 35px;
 }
 
-.contact .links a:hover, .contact .links a:focus {
+#contact .links a:hover, #contact .links a:focus {
   border: 1px solid rgba(46, 189, 206, 0.4);
   border-radius: 0.5em;
   background-color: #e7e7e7;
