@@ -80,7 +80,6 @@ nav a {
   width: 80px;
   height: 35px;
   font-size: 1em;
-  border: 1px solid #e7e7e7;
   margin: 0 5px 0 0;
   text-align: center;
   line-height: 35px;
@@ -89,28 +88,14 @@ nav a {
 
 nav a.home {
   width: 150px;
-  height: 35px;
   margin: 0 auto 0 0;
-  border: 1px solid #e7e7e7;
-  text-align: center;
-  line-height: 35px;
-  transition: 0.1s;
 }
 
 nav a:hover, nav a:focus {
-  border: 1px solid rgba(46, 189, 206, 0.4);
-  border-radius: 0.5em;
-  background-color: #ffffff;
+  box-shadow: 0 1px #3E3E3E;
 }
 
-nav a.home:hover, nav a.home:focus {
-  border: 1px solid #3E3E3E;
-  border-radius: 0.5em;
-  background-color: #e7e7e7;
-  /* box-shadow: inset 0px 0px 3px rgba(62, 62, 62, 0.3); */
-}
-/*
-.hide {
+/* .hide {
   visibility: hidden;
 } */
 
@@ -118,9 +103,7 @@ nav a.home:hover, nav a.home:focus {
 #landing {
   display: flex;
   justify-content: flex-end;
-  /* background: #34c7d9; */
   background: rgba(46, 189, 206, 0.4);
-  /* opacity: 0.5; */
 }
 
 #landing .image {
@@ -249,16 +232,11 @@ nav a.home:hover, nav a.home:focus {
 }
 
 #contact .links a {
-  display: inline-block;
   margin: 0 10px;
-  border: 1px solid #ffffff;
-  border-radius: 0.5em;
   padding: 0 5px;
   line-height: 35px;
 }
 
 #contact .links a:hover, #contact .links a:focus {
-  border: 1px solid rgba(46, 189, 206, 0.4);
-  border-radius: 0.5em;
-  background-color: #e7e7e7;
+  box-shadow: 0 1px #3E3E3E;
 }
