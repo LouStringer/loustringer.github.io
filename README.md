@@ -6,6 +6,7 @@ Have a look around - I hope you like what you see.
 * HTML
 * CSS
 * Javascript
+
 No libraries or frameworks, to show I'm comfortable with vanilla. See my other work for more variation. 
 
 Thanks for stopping by!

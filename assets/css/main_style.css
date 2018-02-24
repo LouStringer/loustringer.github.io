@@ -162,8 +162,6 @@ nav a:hover, nav a:focus {
 }
 
 #about img {
-  display: block;
-  width: 450px;
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 10px;
@@ -223,8 +221,8 @@ nav a:hover, nav a:focus {
 }
 
 #thoughts .thoughts-wrapper .thoughts-example {
-  min-width: 300px;
-  max-width: 500px;
+  width: 500px;
+  min-height: 125px;
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 10px;
