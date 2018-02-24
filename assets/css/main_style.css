@@ -26,10 +26,14 @@
 }
 
 /* reset global settings */
+main {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: b order-box; */
   font-family: "Raleway";
   /* font-family: "Open Sans"; */
   color: #3E3E3E;
@@ -45,12 +49,12 @@ h1, h2, h3 {
 }
 
 h2 {
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
-#work h2, #contact h2 {
+/* #work h2, #contact h2 {
   text-align: right;
-}
+} */
 
 p {
   margin-top: 15px;
@@ -76,11 +80,12 @@ nav {
 
 nav a {
   width: 80px;
-  height: 35px;
+  /* height: 35px; */
   font-size: 1em;
   margin: 0 5px 0 0;
   text-align: center;
-  line-height: 35px;
+  align-self: center;
+  /* line-height: 35px; */
   transition: 0.1s;
 }
 
@@ -91,6 +96,7 @@ nav a.home {
 
 nav a:hover, nav a:focus {
   box-shadow: 0 1px #3E3E3E;
+  font-weight: bold;
 }
 
 /* .hide {
@@ -111,15 +117,16 @@ nav a:hover, nav a:focus {
 
 #landing .landing-wrapper {
   height: 100vh;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding: 0 50px;
+  margin: 0 50px;
+  text-align: right;
 }
 
 #landing .landing-wrapper h1 {
-  text-align: right;
   font-size: 3.25em;
 }
 
@@ -143,18 +150,21 @@ nav a:hover, nav a:focus {
 }
 
 #about .itsAllAboutMe {
-    min-width: 300px;
-    max-width: 500px;
+    width: 600px;
     margin: 10px;
     border: 5px solid rgba(46, 189, 206, 0.3);
-    padding: 10px;
+    padding: 15px;
     background: #FFFFFF;
+}
+
+.itsAllAboutMe p:first-child {
+  margin-top: 0px;
 }
 
 #about img {
   display: block;
   width: 450px;
-  margin: 10px auto;
+  margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 10px;
   background: #FFFFFF;
@@ -174,9 +184,10 @@ nav a:hover, nav a:focus {
 }
 
 #work .work-wrapper .work-example {
-  margin: 10px;
+  width: 450px;
+  margin: 15px;
   border: 5px solid rgba(46, 189, 206, 0.3);
-  background: rgba(224, 162, 173, 0.2);
+  background: #ffffff;
   transition: 0.2s;
 }
 
@@ -187,11 +198,12 @@ nav a:hover, nav a:focus {
 
 #work .work-wrapper .work-image {
   margin: 0;
+  min-width: 300px;
+  max-width: 450px;
 }
 
 #work .work-wrapper .work-content {
-  margin: 0;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -227,20 +239,13 @@ nav a:hover, nav a:focus {
 
 /* contact section */
 #contact {
-  height: 50vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end; */
+  height: 150px;
   padding: 20px 50px;
-  /* background: #e7e7e7; */
 }
 
 #contact .links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
   min-height: 40px;
   max-height: 80px;
   margin: 10px;
@@ -254,4 +259,16 @@ nav a:hover, nav a:focus {
 
 #contact .links a:hover, #contact .links a:focus {
   box-shadow: 0 1px #3E3E3E;
+}
+
+/* footer */
+footer {
+  padding: 20px 50px;
+  background-color: #e7e7e7;
+  text-align: center;
+}
+
+footer a {
+  display: inline;
+  text-decoration: underline;
 }
