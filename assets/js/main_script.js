@@ -25,9 +25,7 @@ function scrolled() {
   lastScrollY = sy;
 }
 
-// To prevent very high number of executions
-// on scroll, change state variable didScroll to true.
-// Check every 250ms if scroll has occured
+// Make scroll execution managable
 window.addEventListener("scroll", function(event) {
   didScroll = true;
 });
@@ -36,5 +34,37 @@ setInterval(function() {
   if (didScroll) {
     scrolled();
     didScroll = false;
-  }
+  };
 }, 250);
+
+//////// Pop out details of work on click
+var workExamples = document.querySelectorAll(".work-example");
+var workDetail = document.querySelectorAll(".work-example > .work-detail")
+
+// write function for workClicked/workTabbed
+
+for (var i = 0; i < workExamples.length; i++) {
+ workExamples[i].addEventListener("click", workClicked);
+ workExamples[i].addEventListener("keypress", workTabbed);
+ workExamples[i].setAttribute("tabindex", i+6);
+}
+
+function workClicked() {
+ for (var i = 0; i < workExamples.length; i++) {
+   workExamples[i].classList.add("work-example");
+   workExamples[i].classList.remove("work-example-clicked");
+   workDetail[i].classList.add("hide");
+   if (workExamples[i] === this) {
+     this.classList.remove("work-example");
+     this.classList.add("work-example-clicked");
+     workDetail[i].classList.remove("hide");
+     window.scrollTo(0, this.offsetTop - 70);
+   };
+ };
+};
+
+function workTabbed(event) {
+  if (event.keyCode === 13) {
+    workClicked();
+  };
+}
