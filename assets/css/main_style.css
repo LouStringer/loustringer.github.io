@@ -76,16 +76,25 @@ nav {
   height: 50px;
   background: #e7e7e7;
   padding: 0 10px;
+  transition: 0.4s;
+}
+
+nav.nav-up {
+  top: -50px;
+  opacity: 0;
+}
+
+nav.nav-down {
+  top: 0px;
+  /* opacity: 0; */
 }
 
 nav a {
   width: 80px;
-  /* height: 35px; */
   font-size: 1em;
   margin: 0 5px 0 0;
   text-align: center;
   align-self: center;
-  /* line-height: 35px; */
   transition: 0.1s;
 }
 
