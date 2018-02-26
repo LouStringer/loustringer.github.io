@@ -1,0 +1,44 @@
+/* Lou Stringer portfolio: blog page style sheet */
+
+body {
+  min-height: 100vh;
+  background-image: url("../images/gplay.png");
+  background-repeat: repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+#title {
+  margin: 20px 10px 10px 10px;
+  border-bottom: 2px solid #e7e7e7;
+  padding: 5px 0;
+}
+
+#date {
+  margin: 0 10px;
+}
+
+#content  {
+  min-width: 300px;
+  margin: 40px 10px;
+  border: 5px solid rgba(46, 189, 206, 0.3);
+  padding: 15px;
+  background: #FFFFFF;
+}
+
+blockquote {
+  max-width: 60%;
+  margin: 10px auto;
+  border: 3px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+#content a {
+  text-decoration: underline;
+}

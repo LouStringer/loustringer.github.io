@@ -17,30 +17,20 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 /* reset global settings */
-main {
-  width: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
   font-family: "Raleway";
-  /* font-family: "Open Sans"; */
   color: #3E3E3E;
 }
 
 *:focus {
   outline: 0;
+}
+
+body {
+  width: 100%;
 }
 
 h1, h2, h3 {
@@ -50,11 +40,8 @@ h1, h2, h3 {
 
 h2 {
   margin: 20px 10px;
+  font-size: 1.75em;
 }
-
-/* #work h2, #contact h2 {
-  text-align: right;
-} */
 
 p, figcaption {
   margin-top: 15px;
@@ -69,11 +56,20 @@ img {
   width: 100%;
 }
 
+#about, #work, #thoughts, #contact, footer {
+  background-image: url("../images/gplay.png");
+  background-repeat: repeat;
+}
+
+#about div, #about figure, #about img , #work div, #thoughts a, #content {
+  border-radius: 10px;
+}
 
 /* Nav bar */
 nav {
   z-index: 10;
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -138,15 +134,6 @@ nav a:hover, nav a:focus {
 
 #landing .landing-wrapper h1 {
   font-size: 3.25em;
-}
-
-#about, #work, #thoughts, #contact, footer {
-  background-image: url("../images/gplay.png");
-  background-repeat: repeat;
-}
-
-#about div, #about figure, #about img , #work div, #thoughts a {
-  border-radius: 10px;
 }
 
 /* about section */
