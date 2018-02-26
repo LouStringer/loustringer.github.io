@@ -24,10 +24,19 @@ main {
 
 #content  {
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
   margin: 40px 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 15px;
   background: #FFFFFF;
+}
+
+#content h3 {
+  margin-top: 25px;
+}
+#content a {
+  text-decoration: underline;
 }
 
 blockquote {
@@ -39,6 +48,18 @@ blockquote {
   text-align: center;
 }
 
-#content a {
-  text-decoration: underline;
+#content img {
+  min-width: 300px;
+  max-width: 450px;
+  align-self: center;
+  margin-top: 15px;
+  border: 5px solid rgba(46, 189, 206, 0.3);
+}
+
+#content ul, #content ol {
+  margin: 15px;
+}
+
+#content li {
+  padding-left: 10px;
 }
