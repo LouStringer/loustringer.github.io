@@ -56,7 +56,7 @@ h2 {
   text-align: right;
 } */
 
-p {
+p, figcaption {
   margin-top: 15px;
 }
 
@@ -64,6 +64,11 @@ a {
   text-decoration: none;
   border-radius: 0px;
 }
+
+img {
+  width: 100%;
+}
+
 
 /* Nav bar */
 nav {
@@ -115,6 +120,7 @@ nav a:hover, nav a:focus {
 }
 
 #landing img {
+  max-width: 35%;
   height: 100vh;
   margin-right: auto;
 }
@@ -134,12 +140,12 @@ nav a:hover, nav a:focus {
   font-size: 3.25em;
 }
 
-#about, #work, #thoughts, #contact {
+#about, #work, #thoughts, #contact, footer {
   background-image: url("../images/gplay.png");
   background-repeat: repeat;
 }
 
-#about div, #about img, #work div, #thoughts a {
+#about div, #about figure, #about img , #work div, #thoughts a {
   border-radius: 10px;
 }
 
@@ -152,24 +158,18 @@ nav a:hover, nav a:focus {
 
 #about .about-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-#about .itsAllAboutMe {
-    width: 600px;
-    margin: 10px;
-    border: 5px solid rgba(46, 189, 206, 0.3);
-    padding: 15px;
-    background: #FFFFFF;
 }
 
 .itsAllAboutMe p:first-child {
   margin-top: 0px;
 }
 
-#about img {
+#about figure, #about .itsAllAboutMe  {
+  min-width: 300px;
+  max-width: 450px;
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   padding: 10px;
@@ -209,10 +209,6 @@ nav a:hover, nav a:focus {
   max-width: 450px;
   padding: 15px;
   text-align: center;
-}
-
-#work .work-wrapper .work-image {
-  width: 100%;
 }
 
 /* show detail (small screen) */
@@ -350,9 +346,13 @@ nav a:hover, nav a:focus {
 
 /* footer */
 footer {
-  padding: 20px 50px;
+  padding: 10px 0;
   background-color: #e7e7e7;
   text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer a {
