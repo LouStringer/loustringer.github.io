@@ -62,7 +62,7 @@ p {
 
 a {
   text-decoration: none;
-  display: block;
+  border-radius: 0px;
 }
 
 /* Nav bar */
@@ -134,9 +134,13 @@ nav a:hover, nav a:focus {
   font-size: 3.25em;
 }
 
-#work, #thoughts, #about, #contact {
-  background-image: url("gplay.png");
+#about, #work, #thoughts, #contact {
+  background-image: url("../images/gplay.png");
   background-repeat: repeat;
+}
+
+#about div, #about img, #work div, #thoughts a {
+  border-radius: 10px;
 }
 
 /* about section */
@@ -263,6 +267,32 @@ nav a:hover, nav a:focus {
   display: none; !important
 }
 
+.work-detail p {
+  margin: 5px 0;
+}
+
+.work-links {
+  display: flex;
+  justify-content: center;
+  margin: auto 0 0 0;
+}
+
+.button {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  margin: 0 5px;
+  border: 3px solid rgba(46, 189, 206, 0.3);
+  border-radius: 5px;
+  line-height: 35px;
+  transition: 0.2s
+}
+
+.button:hover, .button:focus {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 10px 5px -5px #e7e7e7;
+}
+
 /* writing section */
 #thoughts {
   min-height: 50vh;
@@ -273,13 +303,14 @@ nav a:hover, nav a:focus {
 #thoughts .thoughts-wrapper {
   /* min-height: 40vh; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
 #thoughts .thoughts-wrapper .thoughts-example {
-  width: 500px;
+  min-width: 300px;
+  max-width: 450px;
   min-height: 125px;
   margin: 10px;
   border: 5px solid rgba(46, 189, 206, 0.3);
@@ -325,6 +356,5 @@ footer {
 }
 
 footer a {
-  display: inline;
   text-decoration: underline;
 }
