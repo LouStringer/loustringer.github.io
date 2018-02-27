@@ -41,6 +41,7 @@ setInterval(function() {
 var workExamples = document.querySelectorAll(".work-example");
 var workDetail = document.querySelectorAll(".work-example > .work-detail")
 
+
 // write function for workClicked/workTabbed
 
 for (var i = 0; i < workExamples.length; i++) {
@@ -51,34 +52,28 @@ for (var i = 0; i < workExamples.length; i++) {
 
 function workClicked() {
  for (var i = 0; i < workExamples.length; i++) {
-   // workExamples[i].classList.add("work-example");
-   // workExamples[i].classList.remove("work-example-clicked");
    workDetail[i].classList.add("hide");
    if (workExamples[i] === this) {
-     // this.classList.remove("work-example");
-     // this.classList.add("work-example-clicked");
      workDetail[i].classList.remove("hide");
      window.scrollTo(0, this.offsetTop - 70);
    };
  };
 };
 
-// function workClicked() {
-//  for (var i = 0; i < workExamples.length; i++) {
-//    workExamples[i].classList.add("work-example");
-//    workExamples[i].classList.remove("work-example-clicked");
-//    workDetail[i].classList.add("hide");
-//    if (workExamples[i] === this) {
-//      this.classList.remove("work-example");
-//      this.classList.add("work-example-clicked");
-//      workDetail[i].classList.remove("hide");
-//      window.scrollTo(0, this.offsetTop - 70);
-//    };
-//  };
-// };
-
 function workTabbed(event) {
   if (event.keyCode === 13) {
-    workClicked();
+    for (var i = 0; i < workExamples.length; i++) {
+      workDetail[i].classList.add("hide");
+      if (workExamples[i] === this) {
+        workDetail[i].classList.remove("hide");
+        window.scrollTo(0, this.offsetTop - 70);
+      };
+    };
   };
 }
+
+// function workTabbed(event) {
+//   if (event.keyCode === 13) {
+//     workClicked();
+//   };
+// }
