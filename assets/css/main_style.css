@@ -180,7 +180,7 @@ nav a:hover, nav a:focus {
   justify-content: center;
 }
 
-#work .work-wrapper .work-example {
+/* #work .work-wrapper .work-example {
   min-width: 300px;
   max-width: 450px;
   margin: 15px;
@@ -201,53 +201,44 @@ nav a:hover, nav a:focus {
   padding: 15px;
   text-align: center;
 }
+*/
 
-/* show detail (small screen) */
-#work .work-wrapper .work-example-clicked {
+/* adding flexbox w/ flex wrap/grow to manage screen size */
+#work .work-wrapper .work-example {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   min-width: 300px;
-  max-width: 450px;
+  max-width: 900px;
   margin: 15px;
   border: 5px solid rgba(46, 189, 206, 0.3);
   background: #ffffff;
+  transition: 0.2s;
+}
+
+.work-example:hover, .work-example:focus {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 10px 5px -5px #e7e7e7;
+}
+
+#work .work-wrapper .work-overview {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  padding: 15px;
+  text-align: center;
 }
 
 #work .work-wrapper .work-detail {
   box-sizing: border-box;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 300px;
   max-width: 450px;
   padding: 15px;
-  overflow: hidden;
   text-align: center;
-}
-
-/* show detail (wide screen) */
-@media only screen and (min-width: 768px) {
-  #work .work-wrapper .work-example-clicked {
-    display: flex;
-    justify-content: space-around;
-    min-width: 600px;
-    max-width: 900px;
-    margin: 15px;
-    border: 5px solid rgba(46, 189, 206, 0.3);
-    background: #ffffff;
-  }
-
-  #work .work-wrapper .work-detail {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 300px;
-    max-width: 450px;
-    padding: 15px;
-    overflow: hidden;
-    text-align: center;
-  }
 }
 
 #work .work-wrapper .hide {
@@ -296,6 +287,7 @@ nav a:hover, nav a:focus {
 }
 
 #thoughts .thoughts-wrapper .thoughts-example {
+  flex: 1;
   min-width: 300px;
   max-width: 450px;
   min-height: 125px;
