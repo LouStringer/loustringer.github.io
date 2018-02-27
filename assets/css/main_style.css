@@ -33,7 +33,7 @@
 /****** generic styles  ******/
 /* overall section settings */
 #about, #work, #thoughts, #contact  {
-  min-height: 30vh;
+  min-height: 25vh;
   padding: 20px 50px;
 }
 
@@ -217,7 +217,7 @@ nav a.home {
 
 .thoughts-example {
   flex: 1;
-  min-height: 125px;
+  /* min-height: 125px; */
 }
 
 /* contact section */
