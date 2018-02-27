@@ -23,22 +23,77 @@
   padding: 0;
   font-family: "Raleway";
   color: #3E3E3E;
+  text-align: center;
 }
 
 *:focus {
   outline: 0;
 }
 
-body {
-  width: 100%;
+/****** generic styles  ******/
+/* overall section settings */
+#about, #work, #thoughts, #contact  {
+  min-height: 30vh;
+  padding: 20px 50px;
 }
 
+nav, #about, #thoughts, footer {
+  background-color: #e7e7e7;
+}
+
+#about, #work, #thoughts, #contact, footer {
+  background-image: url("../images/gplay.png");
+  background-repeat: repeat;
+}
+
+#about div, #about figure, #about img, #work div, #thoughts a, #content, #content img {
+  border-radius: 10px;
+}
+
+/* flexbox wrappers */
+nav, #landing,.landing-wrapper, .about-wrapper, .work-wrapper, .work-example,
+.work-detail, .work-links, .thoughts-wrapper, .links  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* common content div styles */
+#about figure, .itsAllAboutMe, .work-example, .thoughts-example {
+  min-width: 300px;
+  max-width: 450px;
+  margin: 15px;
+  border: 5px solid rgba(46, 189, 206, 0.3);
+  padding: 15px;
+  background: #FFFFFF;
+}
+
+/* common hover/focus styles */
+a:hover, a:focus  {
+  box-shadow: 0 1px #3E3E3E;
+  font-weight: bold;
+}
+
+.work-example:hover, .work-example:focus, .button:hover,
+.button:focus, .thoughts-example:hover, .thoughts-example:focus {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 10px 5px -5px #e7e7e7;
+}
+
+/* transitions */
+nav, nav a, .work-example, button, .thoughts-example {
+  transition: 0.3s;
+}
+
+/* general element settings */
 h1, h2, h3 {
   font-family: "Montserrat";
   letter-spacing: 0.1em;
 }
 
 h2 {
+  text-align: left;
   margin: 20px 10px;
   font-size: 1.75em;
 }
@@ -56,189 +111,83 @@ img {
   width: 100%;
 }
 
-#about, #work, #thoughts, #contact, footer {
-  background-image: url("../images/gplay.png");
-  background-repeat: repeat;
-}
-
-#about div, #about figure, #about img, #work div, #thoughts a, #content, #content img {
-  border-radius: 10px;
-}
-
 /* Nav bar */
 nav {
   z-index: 10;
   position: fixed;
   top: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
   height: 50px;
-  background: #e7e7e7;
-  padding: 0 10px;
-  transition: 0.4s;
 }
 
-nav.nav-up {
+.nav-up {
   top: -50px;
   opacity: 0;
-}
-
-nav.nav-down {
-  top: 0px;
 }
 
 nav a {
   width: 80px;
   font-size: 1em;
   margin: 0 5px 0 0;
-  text-align: center;
-  align-self: center;
-  transition: 0.1s;
 }
 
 nav a.home {
   width: 150px;
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 5px;
 }
 
-nav a:hover, nav a:focus {
-  box-shadow: 0 1px #3E3E3E;
-  font-weight: bold;
-}
-
-/* main landing section */
+/* landing section */
 #landing {
-  display: flex;
-  justify-content: flex-end;
+  flex-wrap: nowrap;
+  height: 100vh;
   background: rgba(46, 189, 206, 0.4);
 }
 
 #landing img {
+  min-width: 0;
   max-width: 35%;
   height: 100vh;
-  margin-right: auto;
+  margin: 0 auto 0 0;
 }
 
-#landing .landing-wrapper {
+.landing-wrapper {
   height: 100vh;
   min-width: 350px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  margin: 0 50px;
+  margin: 0 30px 0 0;
   text-align: right;
 }
 
-#landing .landing-wrapper h1 {
+.landing-wrapper h1 {
   font-size: 3.25em;
+  align-self: flex-end;
 }
 
-#landing .landing-wrapper h2 {
-  font-size: 1.5em;
+.landing-wrapper h2 {
+  font-size: 1.25em;
 }
 
+/* ******* section-specific styling ******* */
 /* about section */
-#about {
-  min-height: 50vh;
-  padding: 20px 50px;
-  background-color: #e7e7e7;
-}
-
-#about .about-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+#about p {
+  text-align: left;
 }
 
 .itsAllAboutMe p:first-child {
   margin-top: 0px;
 }
 
-#about figure, #about .itsAllAboutMe  {
-  min-width: 300px;
-  max-width: 450px;
-  margin: 10px;
-  border: 5px solid rgba(46, 189, 206, 0.3);
-  padding: 10px;
-  background: #FFFFFF;
-}
-
 /* featured work section */
-#work {
-  min-height: 50vh;
-  padding: 20px 50px;
-  /* background-color: #e7e7e7; */
-}
-
-#work .work-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* #work .work-wrapper .work-example {
-  min-width: 300px;
-  max-width: 450px;
-  margin: 15px;
-  border: 5px solid rgba(46, 189, 206, 0.3);
-  background: #ffffff;
-  transition: 0.2s;
-}
-
-.work-example:hover, .work-example:focus {
-  transform: scale(1.05, 1.05);
-  box-shadow: 0 10px 5px -5px #e7e7e7;
-}
-
-#work .work-wrapper .work-overview {
-  box-sizing: border-box;
-  min-width: 300px;
-  max-width: 450px;
-  padding: 15px;
-  text-align: center;
-}
-*/
-
-/* adding flexbox w/ flex wrap/grow to manage screen size */
-#work .work-wrapper .work-example {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 300px;
+.work-example {
   max-width: 900px;
-  margin: 15px;
-  border: 5px solid rgba(46, 189, 206, 0.3);
-  background: #ffffff;
-  transition: 0.2s;
 }
 
-.work-example:hover, .work-example:focus {
-  transform: scale(1.05, 1.05);
-  box-shadow: 0 10px 5px -5px #e7e7e7;
-}
-
-#work .work-wrapper .work-overview {
+.work-overview, .work-detail {
   box-sizing: border-box;
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  padding: 15px;
-  text-align: center;
-}
-
-#work .work-wrapper .work-detail {
-  box-sizing: border-box;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 300px;
-  max-width: 450px;
-  padding: 15px;
-  text-align: center;
 }
 
 #work .work-wrapper .hide {
@@ -250,94 +199,43 @@ nav a:hover, nav a:focus {
 }
 
 .work-links {
-  display: flex;
-  justify-content: center;
   margin: auto 0 0 0;
 }
 
 .button {
   width: 120px;
-  height: 35px;
-  text-align: center;
-  margin: 0 5px;
+  margin: 5px;
+  padding: 10px;
   border: 3px solid rgba(46, 189, 206, 0.3);
   border-radius: 5px;
-  line-height: 35px;
-  transition: 0.2s
-}
-
-.button:hover, .button:focus {
-  transform: scale(1.05, 1.05);
-  box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
 /* writing section */
-#thoughts {
-  min-height: 50vh;
-  padding: 20px 50px;
-  background-color: #e7e7e7;
+#thoughts * {
+  text-align: left;
 }
 
-#thoughts .thoughts-wrapper {
-  /* min-height: 40vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-#thoughts .thoughts-wrapper .thoughts-example {
+.thoughts-example {
   flex: 1;
-  min-width: 300px;
-  max-width: 450px;
   min-height: 125px;
-  margin: 10px;
-  border: 5px solid rgba(46, 189, 206, 0.3);
-  padding: 10px;
-  background: #FFFFFF;
-  transition: 0.2s;
-}
-
-.thoughts-example:hover, .thoughts-example:focus {
-  transform: scale(1.05, 1.05);
-  box-shadow: 0 10px 5px -5px #e7e7e7;
 }
 
 /* contact section */
-#contact {
-  height: 150px;
-  padding: 20px 50px;
-}
-
-#contact .links {
-  display: flex;
-  flex-wrap: wrap;
+.links {
+  justify-content: flex-start;
   min-height: 40px;
-  max-height: 80px;
   margin: 10px;
 }
 
-#contact .links a {
-  margin: 0 10px;
-  padding: 0 5px;
-  line-height: 35px;
-}
-
-#contact .links a:hover, #contact .links a:focus {
-  box-shadow: 0 1px #3E3E3E;
+.links a {
+  margin: 15px;
 }
 
 /* footer */
-footer {
-  padding: 10px 0;
-  background-color: #e7e7e7;
-  text-align: center;
-}
-
 footer p {
-  margin: 0;
+  padding: 5px;
 }
 
 footer a {
-  text-decoration: underline;
+  box-shadow: 0 1px rgba(46, 189, 206, 0.3);
 }

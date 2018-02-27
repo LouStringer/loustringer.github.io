@@ -1,6 +1,5 @@
 // Lou Stringer portfolio: main JavaScript
 
-
 ////////// Nav bar: hide on scroll down, show on scroll up
 var nav = document.querySelector("nav");
 var lastScrollY = 0;
@@ -14,11 +13,9 @@ function scrolled() {
     // scroll down
     if (sy > lastScrollY && sy > navHeight) {
       nav.classList.add("nav-up");
-      nav.classList.remove("nav-down")
     }
     // scroll up
     else if (lastScrollY > sy) {
-      nav.classList.add("nav-down")
       nav.classList.remove("nav-up");
     };
   };
@@ -37,10 +34,13 @@ setInterval(function() {
   };
 }, 250);
 
+// //////// Add tab through functionality
+// make array of all tabbable elements (in order they appear)
+// add tab index in order (example -> buttons within there)
+//
 //////// Pop out details of work on click
 var workExamples = document.querySelectorAll(".work-example");
-var workDetail = document.querySelectorAll(".work-example > .work-detail")
-
+var workDetail = document.querySelectorAll(".work-detail")
 
 // write function for workClicked/workTabbed
 
@@ -72,6 +72,7 @@ function workTabbed(event) {
   };
 }
 
+// Not sure why this doesn't work, seeing as both of the above do?
 // function workTabbed(event) {
 //   if (event.keyCode === 13) {
 //     workClicked();
