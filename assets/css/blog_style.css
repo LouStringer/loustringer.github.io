@@ -12,6 +12,10 @@ main {
   padding: 50px;
 }
 
+main * {
+  text-align: left;
+}
+
 #title {
   margin: 20px 10px 10px 10px;
   border-bottom: 2px solid #e7e7e7;
