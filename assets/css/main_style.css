@@ -41,7 +41,7 @@ html {
 /****** generic styles  ******/
 /* overall section settings */
 #about, #work, #thoughts, #contact  {
-  min-height: 25vh;
+  min-height: 20vh;
   padding: 20px 50px;
 }
 
@@ -168,7 +168,10 @@ nav a.home {
   height: 100vh;
   min-width: 350px;
   flex-direction: column;
-  margin: 0 30px 0 0;
+  margin: 0 20px 0 0;
+}
+
+.landing-wrapper > * {
   text-align: right;
 }
 
@@ -201,6 +204,7 @@ nav a.home {
   flex: 1;
   min-width: 300px;
   max-width: 450px;
+  padding: 5px;
 }
 
 #work .work-wrapper .hide {
@@ -230,7 +234,7 @@ nav a.home {
 
 .thoughts-example {
   flex: 1;
-  /* min-height: 125px; */
+  min-height: 125px;
 }
 
 /* contact section */
