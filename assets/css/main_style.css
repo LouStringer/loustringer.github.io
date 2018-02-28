@@ -115,6 +115,11 @@ a {
   border-radius: 0px;
 }
 
+p > a {
+  font-weight: bold;
+  box-shadow: 0 1px rgba(46, 189, 206, 0.3);
+}
+
 img {
   width: 100%;
 }
@@ -242,8 +247,4 @@ nav a.home {
 /* footer */
 footer p {
   padding: 5px;
-}
-
-footer a {
-  box-shadow: 0 1px rgba(46, 189, 206, 0.3);
 }

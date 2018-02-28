@@ -39,9 +39,6 @@ main * {
 #content h3 {
   margin-top: 25px;
 }
-#content a {
-  text-decoration: underline;
-}
 
 blockquote {
   max-width: 60%;
